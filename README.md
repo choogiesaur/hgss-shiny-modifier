@@ -4,6 +4,8 @@ Python script to modify the Shiny encounter rate in Pokemon HeartGold/SoulSilver
 - **Currently tested with North American HG/SS
 - Todo: Add support for other versions
 
+![First shiny encounter!](https://github.com/choogiesaur/hgss-shiny-modifier/blob/main/shiny_hoothoot.png?raw=true)
+
 ## Dependencies: 
 **Python3**, python library **ndspy**. To install:
 ```
