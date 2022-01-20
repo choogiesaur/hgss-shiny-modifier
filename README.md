@@ -30,4 +30,4 @@ Korean HG   0×7017C
 Korean SS   0×70174
 Others      0×70080
 ```
-This program uses ndspy to extract and decompress the raw arm9 binary file, modifies the value used to determine shiny encounter rate, then reinserts the arm9 into the rom and resaves it. To be exact we would have to recompress the arm9 before reinsertion, but this causes the game to crash in some cases - so the binary is left decompressed.
+This program uses ndspy to extract and decompress the raw arm9 binary file, modifies the value used to determine shiny encounter rate, then reinserts the arm9 into the rom. To be 100% correct we would have to recompress the arm9 before reinsertion, but since this causes the game to crash in some cases, we leave the binary decompressed (tends to work just fine this way).
