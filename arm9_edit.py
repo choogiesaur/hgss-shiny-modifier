@@ -2,7 +2,7 @@ import ndspy.rom
 import ndspy.codeCompression as comp
 
 # Change shiny rate in NA Soul Silver !
-filename = '4788 Pokemon - SoulSilver Version (USA) (Original Patched).nds'
+filename = 'YourUSAPokemonRom.nds'
 
 # Load rom with ndspy
 rom = ndspy.rom.NintendoDSRom.fromFile(filename)
@@ -19,6 +19,7 @@ print('\nDecompressed arm9 byte size:')
 print(len(decomp_arm9))
 
 # Modify byte at offset 0x70080; default is 0x8
+# Check readme for offsets for other versions
 shiny_value = 0xFF
 
 print("\nValue before: ", decomp_arm9[0x70080])
