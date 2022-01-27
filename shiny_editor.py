@@ -1,3 +1,5 @@
+# Preliminary code for a GUI
+# By no means complete...:)
 import tkinter as tk
 from tkinter import filedialog, Text
 import os
