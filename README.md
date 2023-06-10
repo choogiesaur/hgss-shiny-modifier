@@ -2,7 +2,7 @@
 Python script to modify the Shiny encounter rate in Pokemon HeartGold/SoulSilver for NDS!
 
 - Currently tested with North American HG/SS
-- **TODO:** Auto detect version.
+- **TODO:** Auto-detect version by reading Game ID.
 
 ![First shiny encounter!](https://github.com/choogiesaur/hgss-shiny-modifier/blob/main/shiny_hoothoot.png?raw=true)
 
@@ -14,7 +14,7 @@ pip install ndspy
 
 ## Usage:
 1. Place your .nds file in the same folder as this script.
-2. Modify `shiny_offset` in the script to your correct region if not North America. Other regions values are listed below.
+2. Modify `shiny_offset` in the script to your correct region if not North America. Other region's values are listed below.
 3. Modify `new_shiny_rate` to your liking. `0x8` or 1/8192 is the ingame default, `0xFF` or 1/256 is the script default and highest you can set. I have not tried making shinies less likely (0x0 -> 0x7) but in theory you could do it :-) The average user will want to set a value from 0x8 to 0xFF though.
 5. From your OS terminal of choice, run `python shiny_editor.py <filename>`
 6. Play your edited file via your method of choice.
