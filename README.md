@@ -19,18 +19,19 @@ pip install ndspy
 ```
 
 ## Usage:
-1. Place your `.nds` file (the game ROM) in the same folder as the `shiny_editor.py` script.
+1. Place your `.nds` file (the game ROM) in the same folder as the `shiny_rate_editor.py` script.
 2. The script will auto-detect the game version and use the correct Shiny rate offset. If you want to manually set the Shiny rate offset or the new Shiny rate, you can provide them as command-line arguments. 
 3. Run the script from your terminal, replacing `<filename>` with the name of your `.nds` file, `<shiny_offset>` with the hexadecimal value of your desired shiny rate offset (if you want to set it manually), and `<new_shiny_rate>` with your preferred shiny encounter rate. The shiny encounter rate should be a hexadecimal value between `0x0` and `0xFF`.
 
 ```bash
-python shiny_editor.py <filename> [<shiny_offset>] [<new_shiny_rate>]
+# Arguments in [square brackets] are optional
+python shiny_rate_editor.py <filename> [<shiny_offset>] [<new_shiny_rate>]
 ```
 
 For example, if you have a file named `pokemon.nds` and you want to set the Shiny encounter rate to `0xFF` (1/256, the maximum), you would use:
 
 ```bash
-python shiny_editor.py pokemon.nds 0x70080 0xFF
+python shiny_rate_editor.py pokemon.nds 0x70080 0xFF
 ```
 
 If you don't provide a shiny offset or new shiny rate, the script will use the default values based on the auto-detected game version and a default shiny rate of `0xFF`.
