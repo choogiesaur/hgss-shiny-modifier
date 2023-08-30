@@ -28,9 +28,9 @@ def modify_shiny_rate(filename, shiny_offset='AUTO', new_shiny_rate=0xFF):
     decompressed_arm9 = comp.decompress(rom.arm9)
     print(f'\nDecompressed arm9 byte size: {len(decompressed_arm9)}')
 
-    print(f"\nShiny Value at offset {shiny_offset} before: {decompressed_arm9[shiny_offset]}")
+    print(f"\nShiny Value at offset 0x{shiny_offset:X} before: {decompressed_arm9[shiny_offset]}")
     decompressed_arm9[shiny_offset] = new_shiny_rate
-    print(f"Shiny Value at offset {shiny_offset} after: {decompressed_arm9[shiny_offset]}")
+    print(f"Shiny Value at offset 0x{shiny_offset:X} after: {decompressed_arm9[shiny_offset]}")
 
     # Mark the arm9 as decompressed
     decompressed_arm9[0xBB4] = 0x00
