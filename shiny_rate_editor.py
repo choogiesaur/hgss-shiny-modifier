@@ -32,6 +32,12 @@ def modify_shiny_rate(filename, shiny_offset='AUTO', new_shiny_rate=0xFF):
     decompressed_arm9[shiny_offset] = new_shiny_rate
     print(f"Shiny Value at offset {shiny_offset} after: {decompressed_arm9[shiny_offset]}")
 
+    # Mark the arm9 as decompressed
+    decompressed_arm9[0xBB4] = 0x00
+    decompressed_arm9[0xBB5] = 0x00
+    decompressed_arm9[0xBB6] = 0x00
+    decompressed_arm9[0xBB7] = 0x00
+
     # Note that we do not recompress to avoid crashes.
     rom.arm9 = decompressed_arm9
     rom.saveToFile('shiny_rate_patched.nds')
