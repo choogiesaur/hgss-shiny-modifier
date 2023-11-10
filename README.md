@@ -51,8 +51,5 @@ Here are the offsets for different versions of the game:
 
 The script works by using ndspy to extract and decompress the raw ARM9 binary file from the game ROM. It then modifies the value used to determine Shiny encounter rates and reinserts the modified ARM9 binary back into the ROM file. Ideally, we would recompress the ARM9 binary before reinsertion, but this can cause crashes in some cases. So, we leave the binary decompressed, which seems to work just fine.
 
-## Contributions and Future Work:
-Feel free to contribute to this project! In the future, we hope to expand this tool to work with more games and versions. We'd also like to add more robust error handling and user interaction features. Your suggestions and pull requests are welcome!
-
 ## License:
 This project is licensed under the terms of the MIT license.
